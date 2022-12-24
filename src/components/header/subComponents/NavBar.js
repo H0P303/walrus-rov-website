@@ -4,21 +4,23 @@ import React from "react";
 import Image from "../../../sources/Walrus-Gold.png"
 
 //Styles
-import "../../../styles/style.css"
+import "../../../Styles/style.css"
 
 export default function NavBar(){
     return (
         <div>
             <div className="logo-title-cont">
-                <img src={Image} alt="Walrus"/>
-                <h1 id="Title">WALRUS ROV</h1>
+                <a href="/">
+                    <img src={Image} alt="Walrus"/>
+                    <h1 id="Title">WALRUS ROV</h1>
+                </a>
             </div>
             <ul>
-                <li>Home</li>
-                <li>About</li>
-                <li>Timeline</li>
-                <li>Code</li>
-                <li>Team</li>
+                <li><a href="/">Home</a></li>
+                <li><a href="About">About</a></li>
+                <li><a href="TimeLine">TimeLine</a></li>
+                <li><a href="Code">Code</a></li>
+                <li><a href="Team">Team</a></li>
             </ul>
         </div>
         

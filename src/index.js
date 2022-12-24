@@ -1,15 +1,24 @@
 import React from 'react';
 import ReactDOM from "react-dom/client"
+
+//Statics
 import Header from "./components/header/Header";
-import SectionOne from "./components/Sections/SectionOne";
-import SectionTwo from "./components/Sections/SectionTwo";
 import Footer from "./components/footer/Footer";
 
+//Content
+import MainPage from './Pages/MainPage/MainPage';
+import AboutPage from './Pages/AboutPage/AboutPage';
+import TimeLinePage from './Pages/TimeLinePage/TimeLinePage';
+import CodePage from './Pages/CodePage/CodePage'
+import TeamPage from './Pages/TeamPage/TeamPage'
+
 //Styles
-import "./styles/style.css";
+import "./Styles/style.css";
 
 //Sources
 import sample from "./sources/Walrus-BG-Vid.mp4"
+
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 class App extends React.Component{
   render() {
@@ -19,8 +28,15 @@ class App extends React.Component{
           <source src={sample} type='video/mp4' />
         </video>
         <Header />
-        <SectionOne />
-        <SectionTwo />
+        <Router>
+          <Routes>
+            <Route path='/' element={<MainPage />}></Route>
+            <Route path='/About' element={<AboutPage />}></Route>
+            <Route path='/TimeLine' element={<TimeLinePage />}></Route>
+            <Route path='/Code' element={<CodePage />}></Route>
+            <Route path='/Team' element={<TeamPage />}></Route>
+          </Routes>
+        </Router>
         <Footer />
       </div>
     );

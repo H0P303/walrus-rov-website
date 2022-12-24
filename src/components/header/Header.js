@@ -3,7 +3,7 @@ import NavBar from "./subComponents/NavBar";
 
 
 //Styles
-import "../../styles/style.css"
+import "../../Styles/style.css"
 
 export default function Header() {
     return (
