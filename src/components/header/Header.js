@@ -1,9 +1,8 @@
-import React from "react";
+//Components
 import NavBar from "./subComponents/NavBar";
 
-
 //Styles
-import "../../Styles/style.css"
+import "../../Styles/Style.scss"
 
 export default function Header() {
     return (

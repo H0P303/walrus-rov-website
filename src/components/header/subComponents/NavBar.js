@@ -1,10 +1,8 @@
-import React from "react";
-
 //Images & Video
 import Image from "../../../sources/Walrus-Gold.png"
 
 //Styles
-import "../../../Styles/style.css"
+import "../../../Styles/Style.scss"
 
 export default function NavBar(){
     return (
@@ -23,6 +21,5 @@ export default function NavBar(){
                 <li><a href="Team">Team</a></li>
             </ul>
         </div>
-        
     )
 }

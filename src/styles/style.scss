@@ -1,14 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;400;700&family=Roboto:wght@100;300;400;700;900&display=swap');
 
+//Variables
+
+$walrus-Blue: RGB(26,38,76);
+
 *{
     padding: 0 0 0 0;
     margin: 0 0 0 0;
     font-family: 'Roboto', sans-serif;
-    // font-weight: bold;
     color: white;
     letter-spacing: 3px;
 }
 
+//
+//Statics
+//
 .BG-Vid{
     position: fixed;
     bottom: 0;
@@ -18,7 +24,6 @@
 }
 
 .header{
-    // position: fixed;
     color: white;
     width: 100vw;
     height: 35vh;
@@ -50,7 +55,6 @@
         right: -50%;
         transform: translate(-50%, 0);
         width: 50%;
-        // margin: 5vh 0 0 0;
         padding: 5vh 0 0 0;
         img{
             position: relative;
@@ -69,65 +73,6 @@
 
         a{
             text-decoration: none;
-        }
-    }
-}
-
-.SectionOne{
-    height: 45vh;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    margin: 4em 0 0 0;
-    img{
-        position: relative;
-        width: 34vw;
-        height: 38vh;
-        left: 8%;
-    }
-    #WelcomeLanding{
-        position: relative;
-        background-color: RGB(26,38,76);
-        width: 34vw;
-        height: 38vh;
-        right: 8%;
-        transform: translateY(20%);
-        h1{
-            margin: 2em 0 0 2vw;
-            font-size: 2.5em;
-        }
-        #p-container{
-            font-weight: 100;
-            font-size: 14px;
-            margin: 2em 0 0 2vw;
-            p:nth-child(2){
-                padding: 20px 0 30px 0;
-            }
-        }
-        #SeeMore{
-            text-decoration: none;
-            border: #E6C22E 1px solid;
-            padding: 0.5em 1em 0.5em 1em;
-            margin: 0 0 0 2vw;
-            color: #E6C22E;
-        }
-    }
-}
-
-.SectionTwo{
-    height: auto;
-    width: 100vw;
-    margin: 15vh 0 0 0;
-    // padding: 1vh 0 0 0;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    .ImageContainer{
-        width: 54vw;
-        height: fit-content;
-        img{
-            width: 599px;
-            height: auto;
         }
     }
 }
@@ -165,6 +110,120 @@
                 font-weight: 100;
                 font-size: 14px;
                 line-height: 28px;
+            }
+        }
+    }
+}
+
+
+//
+//MainPage
+//
+.MainSectionOne{
+    height: 45vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    margin: 4em 0 0 0;
+    img{
+        position: relative;
+        width: 34vw;
+        height: 38vh;
+        left: 8%;
+    }
+    #WelcomeLanding{
+        position: relative;
+        background-color: $walrus-Blue;
+        width: 34vw;
+        height: 38vh;
+        right: 8%;
+        transform: translateY(20%);
+        h1{
+            margin: 2em 0 0 2vw;
+            font-size: 2.5em;
+        }
+        #p-container{
+            font-weight: 100;
+            font-size: 14px;
+            margin: 2em 0 0 2vw;
+            p:nth-child(2){
+                padding: 20px 0 30px 0;
+            }
+        }
+        #SeeMore{
+            text-decoration: none;
+            border: #E6C22E 1px solid;
+            padding: 0.5em 1em 0.5em 1em;
+            margin: 0 0 0 2vw;
+            color: #E6C22E;
+        }
+    }
+}
+
+.MainSectionTwo{
+    height: auto;
+    width: 100vw;
+    margin: 15vh 0 0 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    .ImageContainer{
+        width: 54vw;
+        height: fit-content;
+        img{
+            width: 599px;
+            height: auto;
+        }
+    }
+}
+
+//
+//AboutPage
+//
+.AboutSectionOneContainer{
+    width: 100vw;
+    height: 50vh;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 4em 0 0 0;
+    .AboutSectionOne{
+        width: 54vw;
+        height: 50vh;
+        background-color: $walrus-Blue;
+        display: grid;
+        grid-template-columns: 1fr 1.8fr 0.1fr;
+        grid-template-rows: 0.2fr 1fr 0.3fr;
+        grid-template-areas: 
+        '. . .'
+        'Left Right .'
+        '. . .';
+        #Left{
+            grid-area: Left;
+            padding: 0 0 0 0.8vw;
+            h1{
+                font-size: 36px;
+            }
+        }
+        #Right{
+            padding: 0 0 0 2vw;
+            grid-area: Right;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1.2fr 1.2fr;
+            grid-template-areas:
+            "TopP"
+            "BottomP";
+            p{
+                font-weight: 100;
+                font-size: 14px;
+                line-height: 28px;
+            }
+            #TopP{
+                grid-area: TopP;
+            }
+            #BottomP{
+                grid-area: BottomP;
             }
         }
     }

@@ -1,13 +1,13 @@
-import Footer from "../../components/footer/Footer";
+//Components
+import AboutSectionOne from '../AboutPage/Sections/AboutSectionOne'
 
 //Styles
-import "../../Styles/style.css"
+import "../../Styles/Style.scss"
 
 export default function AboutPage() {
     return (
         <div>
-            {/* <h1>Hello World, This is the about page</h1> */}
-            {/* <Footer /> */}
+            <AboutSectionOne />
         </div>
     );
 }

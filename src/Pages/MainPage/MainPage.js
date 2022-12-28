@@ -1,15 +1,15 @@
-import React from "react";
-import SectionOne from "./Sections/SectionOne";
-import SectionTwo from "./Sections/SectionTwo";
-import Footer from "../../components/footer/Footer";
+//Components
+import MainSectionOne from "./Sections/MainSectionOne";
+import MainSectionTwo from "./Sections/MainSectionTwo";
 
-import "../../Styles/style.css";
+//Style
+import "../../Styles/Style.scss";
 
 export default function MainPage() {
     return (
         <div>
-            <SectionOne />
-            <SectionTwo />
+            <MainSectionOne />
+            <MainSectionTwo />
         </div>
     );
 }

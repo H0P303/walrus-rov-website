@@ -14,7 +14,7 @@ import CodePage from './Pages/CodePage/CodePage'
 import TeamPage from './Pages/TeamPage/TeamPage'
 
 //Styles
-import "./Styles/style.css";
+import "./Styles/Style.scss";
 
 //Sources
 import sample from "./sources/Walrus-BG-Vid.mp4"

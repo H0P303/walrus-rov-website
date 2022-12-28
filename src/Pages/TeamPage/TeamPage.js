@@ -1,5 +1,5 @@
 //Styles
-import "../../Styles/style.css"
+import "../../Styles/Style.scss"
 
 export default function TeamPage() {
     return (

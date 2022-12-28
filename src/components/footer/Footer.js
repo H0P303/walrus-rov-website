@@ -1,4 +1,4 @@
-import "../../Styles/style.css"
+import "../../Styles/Style.scss"
 
 import CamosunLogo from '../../sources/Camosun-Corporate-Logo-White.png'
 

@@ -1,14 +1,12 @@
-import React from "react";
-
 //Images & Videos
 import Waves from "../../../sources/Waves.png";
 
 //Styles
-import "../../../Styles/style.css";
+import "../../../Styles/Style.scss";
 
-export default function SectionOne() {
+export default function MainSectionOne() {
     return (
-        <div className="SectionOne">
+        <div className="MainSectionOne">
             <img src={Waves} alt="Waves" />
             <div id="WelcomeLanding">
                 <h1>Welcome</h1>
