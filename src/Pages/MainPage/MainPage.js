@@ -10,7 +10,6 @@ export default function MainPage() {
         <div>
             <SectionOne />
             <SectionTwo />
-            <Footer />
         </div>
     );
 }

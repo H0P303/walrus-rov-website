@@ -67,28 +67,25 @@
 }
 
 .SectionOne {
-  height: 40vh;
+  height: 45vh;
   width: 100vw;
-  margin: 6vh 0 0 0;
-  position: absolute;
+  display: flex;
+  justify-content: center;
+  margin: 4em 0 0 0;
 }
 .SectionOne img {
-  position: inherit;
+  position: relative;
   width: 34vw;
   height: 38vh;
-  left: 40%;
-  top: 50%;
-  transform: translate(-50%, -50%);
+  left: 8%;
 }
 .SectionOne #WelcomeLanding {
-  position: inherit;
+  position: relative;
   background-color: RGB(26, 38, 76);
   width: 34vw;
   height: 38vh;
-  left: 60%;
-  top: 70%;
-  transform: translate(-50%, -50%);
-  z-index: 1;
+  right: 8%;
+  transform: translateY(20%);
 }
 .SectionOne #WelcomeLanding h1 {
   margin: 2em 0 0 2vw;
@@ -113,9 +110,8 @@
 .SectionTwo {
   height: auto;
   width: 100vw;
-  top: 90vh;
-  margin: 30vh 0 0 0;
-  position: absolute;
+  margin: 15vh 0 0 0;
+  position: relative;
   display: flex;
   justify-content: center;
 }
@@ -131,13 +127,12 @@
 }
 
 .Footer {
-  height: 15vh;
+  height: 10vh;
   width: 100vw;
-  top: 170vh;
   position: absolute;
   display: flex;
   justify-content: center;
-  margin: 3em 0 0 0;
+  padding: 5vh 0 0 0;
 }
 .Footer .Container {
   width: 52vw;

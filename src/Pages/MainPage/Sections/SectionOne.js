@@ -16,7 +16,6 @@ export default function SectionOne() {
                     <p>This is the capstone website for Walrus ROV.</p>
                     <p>Feel free to stick around and see how our project progressed over the term.</p>
                 </div>
-                {/* <a href="About" id="SeeMore">See More</a> */}
                 <a href="About" id="SeeMore">See More</a>
             </div>
         </div>
