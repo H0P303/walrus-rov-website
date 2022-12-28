@@ -1,4 +1,4 @@
-import React from "react";
+import Footer from "../../components/footer/Footer";
 
 //Styles
 import "../../Styles/style.css"
@@ -6,7 +6,8 @@ import "../../Styles/style.css"
 export default function AboutPage() {
     return (
         <div>
-            <h1>Hello World, This is the about page</h1>
+            {/* <h1>Hello World, This is the about page</h1> */}
+            <Footer />
         </div>
     );
 }

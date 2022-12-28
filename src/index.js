@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from "react-dom/client"
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 //Statics
 import Header from "./components/header/Header";
@@ -17,8 +18,6 @@ import "./Styles/style.css";
 
 //Sources
 import sample from "./sources/Walrus-BG-Vid.mp4"
-
-import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 class App extends React.Component{
   render() {
