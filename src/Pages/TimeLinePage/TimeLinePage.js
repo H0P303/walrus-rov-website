@@ -1,11 +1,24 @@
 //Styles
 import "../../Styles/Style.scss"
 
+import Waves from "../../sources/Waves.png"
 
 //Sources
 import Pics from "./pics"
 
+function PageTitle() {
+    return (
+        <div className="TimeTitleBg">
+            <img src={Waves} id="TitleImg"/>
+            <div id="TitleContainer">
+                <h1 id="Title">Timeline</h1>
+            </div>
+        </div>
+    )
+}
+
 function ObjectRender() {
+
     const data = [
         {   //1
             title: "1. Organizing Supplies",
@@ -49,14 +62,13 @@ function ObjectRender() {
         },
     ]
 
-    const tiles = data.map(e => {
-
+    const tiles = data.map(t => {
         return (
             <div className="Content">
-                <h3 id="title">{e.title}</h3>
-                <p>{e.bodyText}</p>
+                <h3 id="title">{t.title}</h3>
+                <p>{t.bodyText}</p>
                 <div id="imgContainer">
-                    <img id="y" src={e.image[0]} alt="stuff is here"/>
+                    <img id="y" src={t.image[0]} alt="stuff is here"/>
                     {/* <img id="y" src={setInterval(ImageShow, 1500)} alt="stuff is here"/> */}
                 </div>
             </div>
@@ -71,11 +83,14 @@ function ObjectRender() {
 }
 
 export default function TimeLinePage() {
-
     return (
-        <div className="TimeLineContainer">
-            <ObjectRender />
+        <div>
+            <div className="Cont">
+                <PageTitle />
+            </div>
+            <div className="TimeLineContainer">
+                <ObjectRender />
+            </div>
         </div>
-        
     );
 }
