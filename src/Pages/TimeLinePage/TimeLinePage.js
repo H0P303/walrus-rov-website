@@ -1,28 +1,35 @@
-//Styles
-import "../../Styles/Style.scss"
+import { useState } from 'react';
 
-import Waves from "../../sources/Waves.png"
+//Styles
+import "../../Styles/Style.scss";
 
 //Sources
-import Pics from "./pics"
+import Pics from "./pics";
+import Waves from "../../sources/Waves.png";
+
+// let i = 0;
 
 function PageTitle() {
     return (
         <div className="TimeTitleBg">
-            <img src={Waves} id="TitleImg"/>
+            <img src={Waves} id="TitleImg" alt=''/>
             <div id="TitleContainer">
                 <h1 id="Title">Timeline</h1>
             </div>
         </div>
-    )
+    );
 }
 
 function ObjectRender() {
+
+    // const [img, setImg] = useState(Pics.ControlStationCase);
+    let [i, setI] = useState(0);
 
     const data = [
         {   //1
             title: "1. Organizing Supplies",
             bodyText: "The project began with us going through the material supplied by Camosun Innovates. This included an ROV, a pelican case with a monitor, a 100ft tether, and multiple spare parts and accessories that we would come to use during the project.",
+            // image: shot1[i]
             image: [Pics.ControlStationCase, Pics.ROV]
         },
         {   //2
@@ -60,17 +67,26 @@ function ObjectRender() {
             bodyText: "Our third water test was conducted at Todd Inlet. This day was mainly used for collecting footage that we could use on the symposium day.",
             image: [Pics.ROVTodd1, Pics.ROVTodd2, Pics.ROVTodd3, Pics.ROVTodd4, Pics.ROVTodd5]
         },
-    ]
-
+    ];
+    
+    const handleClick = () => {
+        // setImg(Pics.ControlPCBBack);
+        setI(i++);
+        // if (i >= ) {
+        //     i = 0;
+        // }
+        console.log(i);
+    }
     const tiles = data.map(t => {
         return (
             <div className="Content">
                 <h3 id="title">{t.title}</h3>
                 <p>{t.bodyText}</p>
                 <div id="imgContainer">
-                    <img id="y" src={t.image[0]} alt="stuff is here"/>
-                    {/* <img id="y" src={setInterval(ImageShow, 1500)} alt="stuff is here"/> */}
+                    {/* <img id="y" src={t.image[0]} alt="" /> */}
+                    <img id="y" src={t.image[i]} alt=""/>
                 </div>
+                <button onClick={handleClick}>Next Image</button>
             </div>
         )
     });
@@ -79,7 +95,7 @@ function ObjectRender() {
         <div className="ContentContainer">
             {tiles}
         </div>
-    )
+    );
 }
 
 export default function TimeLinePage() {
